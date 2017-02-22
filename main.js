@@ -43,6 +43,9 @@ var myData;
 
 var songid = randInt(1, 250000);
 
+window.addEventListener("click", function() {
+  location.reload();
+});
 
 $.ajax({
   url: "https://api.genius.com/songs/" + songid +
