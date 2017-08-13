@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: Pixels;
     src: url("PixelOperator.ttf");
@@ -8,7 +9,6 @@ body {
   width:100vw;
   height:100vh;
   position: fixed;
-  overflow:hidden;
   left:0;
   top:0;
   margin:0;
@@ -19,41 +19,82 @@ body {
 #wrapper {
   width:100%;
   height:100%;
-  overflow:hidden;
   background-size: auto 100%;
   background:transparent;
-  z-index:9999;
+  z-index:1;
 }
 
-#song-title {
-  width:50%;
-  position:relative;
-  float:left;
-  font-size:11em;
-  left:-7px;
-  font-weight:700;
-  height:100%;
-  background:transparent;
-  z-index:99999;
+#song-title, #album-title {
+  width: 100%;
+    position: relative;
+    float: left;
+    font-size: 3em;
+    left: -7px;
+    font-weight: 700;
+    height: auto;
+    background: transparent;
+    z-index: 99999;
+    top: 15vh;
+    text-align: center;
+}
+
+span {
+  position: fixed;
+  top:2.5vh;
+  right:2.5vh;
+  font-size: 1.75em;
+}
+
+.fa-info-circle {
+
+  cursor:pointer;
+
+}
+
+.fa-info-circle:hover > #sonic-radio-info {
+  display:block;
+}
+
+#sonic-radio-info {
+  width: 15vw;
+  right:5vw;
+  height:auto;
+  padding:1.5vh 2.5vw;
+  background:#000;
+  font-size:1em;
+  z-index:99999 !important;
+  top:4vh;
+  position: fixed; 
+  color:#fff;
+  display: none;
+}
+
+#sonic-radio-info h1 {
+  font-size:1.25em;
+  border-bottom:1px solid #fff;
+  text-align: center;
+}
+
+br {
+  line-height: 2em;
 }
 
 #album-title {
-  float:left;
-  position:absolute;
-  left:0;
-  bottom:10px;
-  font-size:3em;
-  font-weight:700;
+  top:25vh;
 }
 
 #song-media {
-  width:50%;
-  position:relative;
-  float:right;
-  background:rgba(255,255,255,.0);
-  height:75vh;
-  padding-top:25vh;
-  z-index:999999;
+    top: 20vh;
+    width: 100%;
+    position: relative;
+    /* float: right; */
+    background: rgba(255,255,255,.0);
+    /* height: 75vh; */
+    /* padding-top: 25vh; */
+    z-index: 999999;
+    text-align: center;
+    clear: both;
+    display: block;
 }
 
 #iframe {
@@ -62,4 +103,6 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  z-index:1;
+
 }
